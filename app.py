@@ -63,7 +63,3 @@ def predict():
     output_path = os.path.join(app.config["UPLOAD_FOLDER"], "output.jpg")
     cv2.imwrite(output_path, image_resized)
     return send_file(output_path, mimetype='image/jpeg')
-
-# ✅ Only one app.run block!
-if __name__ == "__main__":
-    app.run(debug=True)
