@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Logo image -->
+  <div class="logo">
+    <img src="{{ url_for('static', filename='cartoon.jpg') }}" class="logo-img">
+  </div>
+
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <title>DosaDoctor</title>
+</head>
+<body>
+  <header>
+    <div class="logo">Byte Bhajis presents</div>
+    <nav>
+      <div class="dropdown">
+        <button class="nav-btn">About</button>
+        <div class="tooltip about-tooltip">
+          🍳 DosaDoctor AI checks your dosa and shows how much it’s burned (in %).<br><br>
+          🔍 Trained on real dosa images using machine learning.<br><br>
+          ✅ Tells if it’s safe to eat or too burned.
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="nav-btn">Features</button>
+        <div class="tooltip feature-tooltip">
+          🔥 Burn % Detector – See how burnt your dosa is.<br><br>
+          ✅ Safe to Eat? – AI tells you instantly.<br><br>
+          ⚡ Instant Results – Fast and accurate.<br><br>
+          📷 Upload or Scan – Camera or image both work.<br><br>
+          📊 Smart AI – Trained on real dosa data.
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="left-section">
+      <!-- ✅ Corrected link to Flask route -->
+      <a href="/upload" class="try-btn">Try Now</a>
+
+      <h1>Dosadoctor</h1>
+      <p>India's first AI dosa diagnostic tool – detect burnt, crisp, and perfect dosas!</p>
+      <p class="tagline"><strong>"Let’s Examine That Crisp"</strong></p>
+      <p class="tagline"><strong>Approved by Ammachi</strong></p>
+    </div>
+  </main>
+</body>
+</html>
