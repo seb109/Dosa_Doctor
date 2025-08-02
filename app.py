@@ -21,6 +21,9 @@ def home():
 @app.route("/upload", methods=["GET"])
 def upload_page():
     return render_template("upload.html")
+@app.route('/ping')
+def ping():
+    return "pong", 200
 
 # 🔹 Route: Prediction logic
 @app.route("/predict", methods=["POST"])
@@ -63,3 +66,4 @@ def predict():
     output_path = os.path.join(app.config["UPLOAD_FOLDER"], "output.jpg")
     cv2.imwrite(output_path, image_resized)
     return send_file(output_path, mimetype='image/jpeg')
+
